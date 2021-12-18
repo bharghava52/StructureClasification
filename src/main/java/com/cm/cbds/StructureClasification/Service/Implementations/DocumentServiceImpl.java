@@ -8,9 +8,6 @@ import java.util.Map;
 import com.cm.cbds.StructureClasification.Service.DocumentService;
 import com.cm.cbds.StructureClasification.to.FileDetailsTo;
 import com.cm.cbds.StructureClasification.to.FileReturnTo;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class DocumentServiceImpl implements DocumentService {
 
@@ -32,12 +29,13 @@ public class DocumentServiceImpl implements DocumentService {
 
     private String compareTwoFile(File firstFile, File secondFile) {
         if (checkIfFileIsHtmlorXML(firstFile) && checkIfFileIsHtmlorXML(secondFile)) {
+            // TODO: make the comparition
         }
         return "0%";
     }
 
     private boolean checkIfFileIsHtmlorXML(File firstFile) {
-        if (firstFile.getName().contains("html") || firstFile.getName().contains("xml")) {
+        if (firstFile.getName().contains(".html") || firstFile.getName().contains(".xml")) {
             return true;
         }
         return false;
