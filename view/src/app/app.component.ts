@@ -11,6 +11,9 @@ export class AppComponent {
   title = 'Structure Clasification Application';
   documentForm: any;
   filesList: any = [];
+  documentResult: any = {
+    "fileData": {}
+  };
   constructor(private fb: FormBuilder, private mainService: MainService) {
     this.buildForm();
   }
@@ -43,9 +46,9 @@ export class AppComponent {
       fileData: arrayList
     }
     this.mainService.submitFileDetails(data).subscribe(res => {
-
+      this.documentResult = res;
     }, err => {
-
+      console.log(err);
     });
   }
 }
