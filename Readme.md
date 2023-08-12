@@ -36,4 +36,5 @@ kubectl apply -f structureclasification-ingress.yml
 ```
 sudo nano /etc/hosts
 ```
+### Note
 add the mapping to structureclasification.com
