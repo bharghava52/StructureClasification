@@ -2,7 +2,7 @@
 
 ### in this project you will be able to compare the tags of two files mainly html and xml file tags. you can compare n number of files at the same time
 
-## UI Build
+## UI Build commands
 ```
 cd view
 npm i
